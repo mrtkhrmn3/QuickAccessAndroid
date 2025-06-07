@@ -13,7 +13,7 @@ import com.example.quickaccessandroid.R;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ResidentActiveNotificationsActivity extends AppCompatActivity {
+public class SecurityActiveNotificationsActivity extends AppCompatActivity {
 
     private RecyclerView notificationsRecyclerView;
     private NotificationAdapter notificationAdapter;
@@ -22,15 +22,17 @@ public class ResidentActiveNotificationsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_resident_active_notifications);
+        setContentView(R.layout.activity_security_active_notifications);
 
         notificationsRecyclerView = findViewById(R.id.notificationsRecyclerView);
 
         // Initialize the list of notifications
         notificationList = new ArrayList<>();
-        notificationList.add(new Notification("Package Delivery", "Your package has been delivered.", "10 mins ago"));
-        notificationList.add(new Notification("Guest Arrival", "John Doe is at the gate.", "15 mins ago"));
-        notificationList.add(new Notification("Food Delivery", "Pizza is arriving in 5 minutes.", "20 mins ago"));
+        notificationList.add(new Notification("B-118", "Food Delivery", "10 mins ago"));
+        notificationList.add(new Notification("B-724", "Food Delivery", "15 mins ago"));
+        notificationList.add(new Notification("C-087", "Guest Coming", "20 mins ago"));
+        notificationList.add(new Notification("A-087", "Guest Coming", "30 mins ago"));
+        notificationList.add(new Notification("A-587", "Guest Coming", "40 mins ago"));
 
         // Set up the RecyclerView
         notificationsRecyclerView.setLayoutManager(new LinearLayoutManager(this));

@@ -6,61 +6,83 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="#D2B48C"
-    android:padding="16dp">
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New Resident"
+        android:textColor="#5C4033"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"/>
 
     <EditText
         android:id="@+id/editResidentName"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Name"
+        android:textColorHint="@color/black"
         android:inputType="text"
         android:layout_marginTop="16dp"
-        android:padding="12dp"/>
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"/>
 
     <EditText
         android:id="@+id/editResidentSurname"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Surname"
+        android:textColorHint="@color/black"
         android:inputType="text"
         android:layout_marginTop="16dp"
-        android:padding="12dp"/>
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"/>
 
     <EditText
         android:id="@+id/editResidentBlock"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Block"
+        android:textColorHint="@color/black"
         android:inputType="text"
         android:layout_marginTop="16dp"
-        android:padding="12dp"/>
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"/>
 
     <EditText
         android:id="@+id/editResidentAptNo"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Apartment No"
+        android:textColorHint="@color/black"
         android:inputType="number"
         android:layout_marginTop="16dp"
-        android:padding="12dp"/>
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"/>
 
     <EditText
         android:id="@+id/editResidentPhoneNo"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Phone No"
+        android:textColorHint="@color/black"
         android:inputType="phone"
         android:layout_marginTop="16dp"
-        android:padding="12dp"/>
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"/>
 
     <EditText
         android:id="@+id/editResidentSiteName"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Site Name"
+        android:textColorHint="@color/black"
         android:inputType="text"
         android:layout_marginTop="16dp"
-        android:padding="12dp"/>
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"/>
 
     <Button
         android:id="@+id/buttonAddResident"
@@ -70,6 +92,7 @@
         android:textAllCaps="false"
         android:backgroundTint="#8B4513"
         android:textColor="#FFFFFF"
-        android:layout_marginTop="24dp"/>
+        android:layout_marginTop="24dp"
+        android:textSize="20sp"/>
 
 </LinearLayout>

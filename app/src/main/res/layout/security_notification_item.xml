@@ -1,6 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
+    android:layout_width="200dp"
     android:layout_height="wrap_content"
     android:layout_margin="8dp"
     android:elevation="4dp"
@@ -10,33 +9,38 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp"
+        android:padding="12dp"
         android:background="#ecd9c0">
 
         <TextView
             android:id="@+id/notificationTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Notification Title"
-            android:textSize="18sp"
+            android:text="AptNo"
+            android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="#000000" />
+            android:textColor="#000000"
+            android:maxLines="1"
+            android:ellipsize="end" />
 
         <TextView
             android:id="@+id/notificationMessage"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Notification message"
-            android:textSize="16sp"
-            android:textColor="#666666" />
+            android:text="Notfication Type"
+            android:textSize="14sp"
+            android:textColor="#444444"
+            android:maxLines="2"
+            android:ellipsize="end" />
 
         <TextView
             android:id="@+id/notificationTime"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="2 mins ago"
-            android:textSize="14sp"
-            android:textColor="#999999" />
+            android:text="10 mins ago"
+            android:textSize="12sp"
+            android:textColor="#777777"
+            android:gravity="end" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>
