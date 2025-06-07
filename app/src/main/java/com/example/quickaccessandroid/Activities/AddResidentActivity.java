@@ -39,7 +39,7 @@ public class AddResidentActivity extends AppCompatActivity {
         buttonAddResident = findViewById(R.id.buttonAddResident);
 
         // API servisi başlat
-        apiService = ApiClient.getClient().create(ApiService.class);
+        apiService = ApiClient.getClient(getApplicationContext()).create(ApiService.class);
 
         buttonAddResident.setOnClickListener(new View.OnClickListener() {
             @Override
