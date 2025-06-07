@@ -1,12 +1,12 @@
 package com.example.quickaccessandroid.Models;
 
-public class ResidentNotification {
+public class Notification {
     private String title;
     private String message;
     private String timestamp;
 
     // Constructor
-    public ResidentNotification(String title, String message, String timestamp) {
+    public Notification(String title, String message, String timestamp) {
         this.title = title;
         this.message = message;
         this.timestamp = timestamp;

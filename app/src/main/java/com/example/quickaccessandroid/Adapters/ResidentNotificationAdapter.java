@@ -7,17 +7,17 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.quickaccessandroid.Models.ResidentNotification;
+import com.example.quickaccessandroid.Models.Notification;
 import com.example.quickaccessandroid.R;
 
 import java.util.List;
 
 public class ResidentNotificationAdapter extends RecyclerView.Adapter<ResidentNotificationAdapter.NotificationViewHolder> {
 
-    private List<ResidentNotification> notificationsList;
+    private List<Notification> notificationsList;
 
     // Constructor
-    public ResidentNotificationAdapter(List<ResidentNotification> notificationsList) {
+    public ResidentNotificationAdapter(List<Notification> notificationsList) {
         this.notificationsList = notificationsList;
     }
 
@@ -29,7 +29,7 @@ public class ResidentNotificationAdapter extends RecyclerView.Adapter<ResidentNo
 
     @Override
     public void onBindViewHolder(NotificationViewHolder holder, int position) {
-        ResidentNotification notification = notificationsList.get(position);
+        Notification notification = notificationsList.get(position);
         holder.title.setText(notification.getTitle());
         holder.message.setText(notification.getMessage());
         holder.timestamp.setText(notification.getTimestamp());
