@@ -1,7 +1,6 @@
 package com.example.quickaccessandroid.DTO;
 
 public class NotificationDTO {
-    public String id;
     public String userId;
     public String block;
     public String aptNo;

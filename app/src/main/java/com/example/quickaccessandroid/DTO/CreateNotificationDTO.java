@@ -1,9 +1,11 @@
 package com.example.quickaccessandroid.DTO;
 
 public class CreateNotificationDTO {
-    public String block;
-    public String aptNo;
     public String type;
     public String description;
-    public String siteName;
+
+    public CreateNotificationDTO(String type, String description) {
+        this.type = type;
+        this.description = description;
+    }
 }
