@@ -5,7 +5,8 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="#D2B48C">
+    android:background="#D2B48C"
+    android:padding="20dp">
 
     <!-- App Logo -->
     <ImageView
@@ -33,22 +34,24 @@
         android:id="@+id/editUsername"
         android:layout_height="50dp"
         android:hint="Username"
+        android:textColorHint="@color/black"
         android:padding="12dp"
         android:background="@drawable/edittext_background"
         android:inputType="text"
         android:layout_marginTop="32dp"
-        android:layout_width="300dp"/>
+        android:layout_width="match_parent"/>
 
     <!-- Password -->
     <EditText
         android:id="@+id/editPassword"
         android:layout_height="50dp"
         android:hint="Password"
+        android:textColorHint="@color/black"
         android:padding="12dp"
         android:background="@drawable/edittext_background"
         android:inputType="textPassword"
         android:layout_marginTop="16dp"
-        android:layout_width="300dp"/>
+        android:layout_width="match_parent"/>
 
     <!-- Login Button -->
     <Button
@@ -59,6 +62,6 @@
         android:backgroundTint="#8B4513"
         android:textColor="#FFFFFF"
         android:layout_marginTop="24dp"
-        android:layout_width="300dp"/>
+        android:layout_width="match_parent"/>
 
 </LinearLayout>

@@ -6,53 +6,79 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="#D2B48C"
-    android:padding="16dp">
+    android:padding="20dp">
 
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add New Site Manager"
+        android:textColor="#5C4033"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Name -->
     <EditText
         android:id="@+id/editSiteManagerName"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Name"
+        android:textColorHint="@color/black"
         android:inputType="text"
         android:layout_marginTop="16dp"
-        android:padding="12dp"/>
+        android:padding="12dp"
+        android:background="@drawable/edittext_background" />
 
+    <!-- Surname -->
     <EditText
         android:id="@+id/editSiteManagerSurname"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Surname"
+        android:textColorHint="@color/black"
         android:inputType="text"
         android:layout_marginTop="16dp"
-        android:padding="12dp"/>
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"/>
 
+    <!-- Site Name -->
     <EditText
         android:id="@+id/editSiteManagerSiteName"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Site Name"
+        android:textColorHint="@color/black"
         android:inputType="text"
         android:layout_marginTop="16dp"
-        android:padding="12dp"/>
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"/>
 
+    <!-- Username -->
     <EditText
         android:id="@+id/editSiteManagerUsername"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Username"
+        android:textColorHint="@color/black"
         android:inputType="text"
         android:layout_marginTop="16dp"
-        android:padding="12dp"/>
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"/>
 
+    <!-- Password -->
     <EditText
         android:id="@+id/editSiteManagerPassword"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:hint="Password"
+        android:textColorHint="@color/black"
         android:inputType="textPassword"
         android:layout_marginTop="16dp"
-        android:padding="12dp"/>
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"/>
 
+    <!-- Add Button -->
     <Button
         android:id="@+id/buttonAddSiteManager"
         android:layout_width="match_parent"
@@ -61,6 +87,7 @@
         android:textAllCaps="false"
         android:backgroundTint="#8B4513"
         android:textColor="#FFFFFF"
+        android:textSize="20sp"
         android:layout_marginTop="24dp"/>
 
 </LinearLayout>
