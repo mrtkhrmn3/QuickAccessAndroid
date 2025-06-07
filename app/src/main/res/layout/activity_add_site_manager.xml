@@ -28,7 +28,8 @@
         android:inputType="text"
         android:layout_marginTop="16dp"
         android:padding="12dp"
-        android:background="@drawable/edittext_background" />
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/black"/>
 
     <!-- Surname -->
     <EditText
@@ -40,7 +41,8 @@
         android:inputType="text"
         android:layout_marginTop="16dp"
         android:padding="12dp"
-        android:background="@drawable/edittext_background"/>
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/black"/>
 
     <!-- Site Name -->
     <EditText
@@ -52,7 +54,8 @@
         android:inputType="text"
         android:layout_marginTop="16dp"
         android:padding="12dp"
-        android:background="@drawable/edittext_background"/>
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/black"/>
 
     <!-- Username -->
     <EditText
@@ -64,7 +67,8 @@
         android:inputType="text"
         android:layout_marginTop="16dp"
         android:padding="12dp"
-        android:background="@drawable/edittext_background"/>
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/black"/>
 
     <!-- Password -->
     <EditText
@@ -76,7 +80,8 @@
         android:inputType="textPassword"
         android:layout_marginTop="16dp"
         android:padding="12dp"
-        android:background="@drawable/edittext_background"/>
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/black"/>
 
     <!-- Add Button -->
     <Button

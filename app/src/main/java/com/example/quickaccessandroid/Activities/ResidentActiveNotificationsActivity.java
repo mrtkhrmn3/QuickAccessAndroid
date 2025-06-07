@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.quickaccessandroid.Adapters.NotificationAdapter;
+import com.example.quickaccessandroid.Adapters.ResidentNotificationAdapter;
 import com.example.quickaccessandroid.Models.Notification;
 import com.example.quickaccessandroid.R;
 
@@ -16,7 +16,7 @@ import java.util.List;
 public class ResidentActiveNotificationsActivity extends AppCompatActivity {
 
     private RecyclerView notificationsRecyclerView;
-    private NotificationAdapter notificationAdapter;
+    private ResidentNotificationAdapter residentNotificationAdapter;
     private List<Notification> notificationList;
 
     @Override
@@ -34,8 +34,8 @@ public class ResidentActiveNotificationsActivity extends AppCompatActivity {
 
         // Set up the RecyclerView
         notificationsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        notificationAdapter = new NotificationAdapter(notificationList);
-        notificationsRecyclerView.setAdapter(notificationAdapter);
+        residentNotificationAdapter = new ResidentNotificationAdapter(notificationList);
+        notificationsRecyclerView.setAdapter(residentNotificationAdapter);
 
     }
 }

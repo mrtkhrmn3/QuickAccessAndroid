@@ -3,10 +3,10 @@ package com.example.quickaccessandroid.Activities;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.quickaccessandroid.Adapters.NotificationAdapter;
+import com.example.quickaccessandroid.Adapters.SecurityNotificationAdapter;
 import com.example.quickaccessandroid.Models.Notification;
 import com.example.quickaccessandroid.R;
 
@@ -16,7 +16,7 @@ import java.util.List;
 public class SecurityActiveNotificationsActivity extends AppCompatActivity {
 
     private RecyclerView notificationsRecyclerView;
-    private NotificationAdapter notificationAdapter;
+    private SecurityNotificationAdapter securityNotificationAdapter;
     private List<Notification> notificationList;
 
     @Override
@@ -25,6 +25,10 @@ public class SecurityActiveNotificationsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_security_active_notifications);
 
         notificationsRecyclerView = findViewById(R.id.notificationsRecyclerView);
+
+        GridLayoutManager layoutManager = new GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false);
+        notificationsRecyclerView.setLayoutManager(layoutManager);
+
 
         // Initialize the list of notifications
         notificationList = new ArrayList<>();
@@ -35,9 +39,8 @@ public class SecurityActiveNotificationsActivity extends AppCompatActivity {
         notificationList.add(new Notification("A-587", "Guest Coming", "40 mins ago"));
 
         // Set up the RecyclerView
-        notificationsRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        notificationAdapter = new NotificationAdapter(notificationList);
-        notificationsRecyclerView.setAdapter(notificationAdapter);
+        securityNotificationAdapter = new SecurityNotificationAdapter(notificationList);
+        notificationsRecyclerView.setAdapter(securityNotificationAdapter);
 
     }
 }

@@ -27,7 +27,8 @@
         android:inputType="text"
         android:layout_marginTop="16dp"
         android:padding="12dp"
-        android:background="@drawable/edittext_background"/>
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/editResidentSurname"
@@ -38,29 +39,44 @@
         android:inputType="text"
         android:layout_marginTop="16dp"
         android:padding="12dp"
-        android:background="@drawable/edittext_background"/>
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/black"/>
 
-    <EditText
-        android:id="@+id/editResidentBlock"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Block"
-        android:textColorHint="@color/black"
-        android:inputType="text"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
         android:layout_marginTop="16dp"
-        android:padding="12dp"
-        android:background="@drawable/edittext_background"/>
+        android:gravity="center">
 
-    <EditText
-        android:id="@+id/editResidentAptNo"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:hint="Apartment No"
-        android:textColorHint="@color/black"
-        android:inputType="number"
-        android:layout_marginTop="16dp"
-        android:padding="12dp"
-        android:background="@drawable/edittext_background"/>
+        <!-- Block EditText -->
+        <EditText
+            android:id="@+id/editResidentBlock"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:hint="Block"
+            android:textColorHint="@color/black"
+            android:inputType="text"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/black"
+            android:layout_marginEnd="8dp"/>
+
+        <!-- Apartment No EditText -->
+        <EditText
+            android:id="@+id/editResidentAptNo"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:hint="Apartment No"
+            android:textColorHint="@color/black"
+            android:inputType="number"
+            android:padding="12dp"
+            android:background="@drawable/edittext_background"
+            android:textColor="@color/black"
+            android:layout_marginStart="8dp"/>
+    </LinearLayout>
 
     <EditText
         android:id="@+id/editResidentPhoneNo"
@@ -71,7 +87,8 @@
         android:inputType="phone"
         android:layout_marginTop="16dp"
         android:padding="12dp"
-        android:background="@drawable/edittext_background"/>
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/editResidentSiteName"
@@ -82,7 +99,8 @@
         android:inputType="text"
         android:layout_marginTop="16dp"
         android:padding="12dp"
-        android:background="@drawable/edittext_background"/>
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/black"/>
 
     <Button
         android:id="@+id/buttonAddResident"

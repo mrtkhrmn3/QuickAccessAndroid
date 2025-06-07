@@ -12,12 +12,12 @@ import com.example.quickaccessandroid.R;
 
 import java.util.List;
 
-public class NotificationAdapter extends RecyclerView.Adapter<NotificationAdapter.NotificationViewHolder> {
+public class ResidentNotificationAdapter extends RecyclerView.Adapter<ResidentNotificationAdapter.NotificationViewHolder> {
 
     private List<Notification> notificationsList;
 
     // Constructor
-    public NotificationAdapter(List<Notification> notificationsList) {
+    public ResidentNotificationAdapter(List<Notification> notificationsList) {
         this.notificationsList = notificationsList;
     }
 

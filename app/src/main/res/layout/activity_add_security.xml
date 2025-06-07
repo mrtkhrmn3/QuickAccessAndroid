@@ -27,7 +27,8 @@
         android:inputType="text"
         android:layout_marginTop="16dp"
         android:padding="12dp"
-        android:background="@drawable/edittext_background"/>
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/editSecuritySurname"
@@ -38,7 +39,8 @@
         android:inputType="text"
         android:layout_marginTop="16dp"
         android:padding="12dp"
-        android:background="@drawable/edittext_background"/>
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/editSecuritySiteName"
@@ -49,7 +51,32 @@
         android:inputType="text"
         android:layout_marginTop="16dp"
         android:padding="12dp"
-        android:background="@drawable/edittext_background"/>
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/editSecurityUsername"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Username"
+        android:textColorHint="@color/black"
+        android:inputType="text"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/black"/>
+
+    <EditText
+        android:id="@+id/editSecurityPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:textColorHint="@color/black"
+        android:inputType="textPassword"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/black"/>
 
     <Button
         android:id="@+id/buttonAddSecurity"

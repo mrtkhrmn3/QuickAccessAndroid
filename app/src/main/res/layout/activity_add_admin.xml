@@ -27,7 +27,8 @@
         android:inputType="text"
         android:layout_marginTop="16dp"
         android:padding="12dp"
-        android:background="@drawable/edittext_background"/>
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/editAdminSurname"
@@ -38,7 +39,8 @@
         android:inputType="text"
         android:layout_marginTop="16dp"
         android:padding="12dp"
-        android:background="@drawable/edittext_background"/>
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/editAdminUsername"
@@ -49,7 +51,8 @@
         android:inputType="text"
         android:layout_marginTop="16dp"
         android:padding="12dp"
-        android:background="@drawable/edittext_background"/>
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/black"/>
 
     <EditText
         android:id="@+id/editAdminPassword"
@@ -60,7 +63,8 @@
         android:inputType="textPassword"
         android:layout_marginTop="16dp"
         android:padding="12dp"
-        android:background="@drawable/edittext_background"/>
+        android:background="@drawable/edittext_background"
+        android:textColor="@color/black"/>
 
     <Button
         android:id="@+id/buttonAddAdmin"

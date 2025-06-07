@@ -35,7 +35,7 @@
         android:id="@+id/packageBtn"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:text="Package"
+        android:text="Cargo"
         android:textAllCaps="false"
         android:backgroundTint="#8B4513"
         android:textColor="#FFFFFF"

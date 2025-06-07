@@ -90,10 +90,10 @@ public class LoginActivity extends AppCompatActivity {
                 intent = new Intent(LoginActivity.this, AddSiteManagerActivity.class);
                 break;
             case "resident":
-                intent = new Intent(LoginActivity.this, AddResidentActivity.class);
+                intent = new Intent(LoginActivity.this, ResidentMainMenuActivity.class);
                 break;
             case "security":
-                intent = new Intent(LoginActivity.this, AddSecurityActivity.class);
+                intent = new Intent(LoginActivity.this, SecurityActiveNotificationsActivity.class);
                 break;
             default:
                 Toast.makeText(this, "Undefined role: " + role, Toast.LENGTH_SHORT).show();

@@ -21,6 +21,7 @@
         <activity android:name=".Activities.AddSiteManagerActivity" />
         <activity android:name=".Activities.AddResidentActivity" />
         <activity android:name=".Activities.AddSecurityActivity" />
+        <activity android:name=".Activities.SecurityActiveNotificationsActivity" />
 
 
         <activity
