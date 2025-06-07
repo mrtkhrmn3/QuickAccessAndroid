@@ -12,6 +12,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.quickaccessandroid.API.ApiClient;
 import com.example.quickaccessandroid.API.ApiService;
+import com.example.quickaccessandroid.Activities.AddResidentActivity;
 import com.example.quickaccessandroid.API.JwtUtils;
 import com.example.quickaccessandroid.DTO.LoginRequestDTO;
 import com.example.quickaccessandroid.DTO.LoginResponseDTO;
@@ -105,7 +106,7 @@ public class LoginActivity extends AppCompatActivity {
                 intent = new Intent(LoginActivity.this, AddAdminActivity.class);
                 break;
             case "sitemanager":
-                intent = new Intent(LoginActivity.this, AddSiteManagerActivity.class);
+                intent = new Intent(LoginActivity.this, AddResidentActivity.class);
                 break;
             case "resident":
                 intent = new Intent(LoginActivity.this, ResidentMainMenuActivity.class);
