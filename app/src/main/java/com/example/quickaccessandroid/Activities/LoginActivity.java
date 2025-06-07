@@ -3,6 +3,7 @@ package com.example.quickaccessandroid.Activities;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -11,9 +12,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.quickaccessandroid.API.ApiClient;
 import com.example.quickaccessandroid.API.ApiService;
+import com.example.quickaccessandroid.API.JwtUtils;
 import com.example.quickaccessandroid.DTO.LoginRequestDTO;
 import com.example.quickaccessandroid.DTO.LoginResponseDTO;
 import com.example.quickaccessandroid.R;
+
+import org.json.JSONObject;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -34,7 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         edtPassword = findViewById(R.id.editPassword);
         btnLogin = findViewById(R.id.buttonLogin);
 
-        API = ApiClient.getClient().create(ApiService.class);
+        API = ApiClient.getClient(getApplicationContext()).create(ApiService.class);
 
         btnLogin.setOnClickListener(v -> {
             String username = edtUsername.getText().toString().trim();
@@ -65,6 +69,20 @@ public class LoginActivity extends AppCompatActivity {
                             .putString("token", token)
                             .putString("role", role)
                             .apply();
+
+                    // Token'dan verileri test et
+                    JSONObject decoded = JwtUtils.decodeJWT(token);
+                    if (decoded != null) {
+                        String userId = decoded.optString("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier");
+                        String username = decoded.optString("http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name");
+                        String roleFromToken = decoded.optString("http://schemas.microsoft.com/ws/2008/06/identity/claims/role");
+
+                        Log.d("JWT_TEST", "UserId: " + userId);
+                        Log.d("JWT_TEST", "Username: " + username);
+                        Log.d("JWT_TEST", "Role from token: " + roleFromToken);
+                    } else {
+                        Log.e("JWT_TEST", "Token decode failed.");
+                    }
 
                     // Rolüne göre ilgili sayfaya yönlendir
                     redirectToRoleScreen(role);
