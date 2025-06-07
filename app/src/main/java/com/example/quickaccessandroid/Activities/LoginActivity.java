@@ -103,10 +103,10 @@ public class LoginActivity extends AppCompatActivity {
         Intent intent;
         switch (role.toLowerCase()) {
             case "admin":
-                intent = new Intent(LoginActivity.this, AddAdminActivity.class);
+                intent = new Intent(LoginActivity.this, AddSiteManagerActivity.class);
                 break;
             case "sitemanager":
-                intent = new Intent(LoginActivity.this, AddResidentActivity.class);
+                intent = new Intent(LoginActivity.this, AddSecurityActivity.class);
                 break;
             case "resident":
                 intent = new Intent(LoginActivity.this, ResidentMainMenuActivity.class);
