@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#D2B48C"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editAdminName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Name"
+        android:inputType="text"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/editAdminSurname"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Surname"
+        android:inputType="text"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/editAdminUsername"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Username"
+        android:inputType="text"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/editAdminPassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"/>
+
+    <Button
+        android:id="@+id/buttonAddAdmin"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Add Admin"
+        android:textAllCaps="false"
+        android:backgroundTint="#8B4513"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="24dp"/>
+
+</LinearLayout>

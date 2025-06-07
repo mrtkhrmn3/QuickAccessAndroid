@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#D2B48C">
+
+    <!-- App Logo -->
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/circular_background"
+        android:clipToOutline="true"
+        android:contentDescription="App Logo"
+        android:src="@drawable/logo_quickaccess"/>
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QuickAccess Login"
+        android:textColor="#5C4033"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Username -->
+    <EditText
+        android:id="@+id/editUsername"
+        android:layout_height="50dp"
+        android:hint="Username"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:inputType="text"
+        android:layout_marginTop="32dp"
+        android:layout_width="300dp"/>
+
+    <!-- Password -->
+    <EditText
+        android:id="@+id/editPassword"
+        android:layout_height="50dp"
+        android:hint="Password"
+        android:padding="12dp"
+        android:background="@drawable/edittext_background"
+        android:inputType="textPassword"
+        android:layout_marginTop="16dp"
+        android:layout_width="300dp"/>
+
+    <!-- Login Button -->
+    <Button
+        android:id="@+id/buttonLogin"
+        android:layout_height="50dp"
+        android:text="Login"
+        android:textAllCaps="false"
+        android:backgroundTint="#8B4513"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="24dp"
+        android:layout_width="300dp"/>
+
+</LinearLayout>

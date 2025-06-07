@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#D2B48C"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editResidentName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Name"
+        android:inputType="text"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/editResidentSurname"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Surname"
+        android:inputType="text"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/editResidentBlock"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Block"
+        android:inputType="text"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/editResidentAptNo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Apartment No"
+        android:inputType="number"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/editResidentPhoneNo"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Phone No"
+        android:inputType="phone"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/editResidentSiteName"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Site Name"
+        android:inputType="text"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"/>
+
+    <Button
+        android:id="@+id/buttonAddResident"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Add Resident"
+        android:textAllCaps="false"
+        android:backgroundTint="#8B4513"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="24dp"/>
+
+</LinearLayout>
