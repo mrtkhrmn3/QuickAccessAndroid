@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#D2B48C"
+    android:padding="20dp">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Site Manager Main Menu"
+        android:textColor="#5C4033"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginTop="24dp"/>
+
+    <!-- Food Delivery Button -->
+    <Button
+        android:id="@+id/addNewResidentBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Add New Resident"
+        android:textAllCaps="false"
+        android:backgroundTint="#8B4513"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="24dp"
+        android:textSize="20sp"/>
+
+    <!-- Package Button -->
+    <Button
+        android:id="@+id/addNewSecurityBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Add New Security"
+        android:textAllCaps="false"
+        android:backgroundTint="#8B4513"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"/>
+
+    <!-- Guest Coming Button -->
+    <Button
+        android:id="@+id/manageResidentsBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Manage Residents"
+        android:textAllCaps="false"
+        android:backgroundTint="#067e00"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"/>
+
+
+    <!-- Active Notifications Button -->
+    <Button
+        android:id="@+id/manageSecuritiesBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Manage Securities"
+        android:textAllCaps="false"
+        android:backgroundTint="#067e00"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#5C4033"/>
+
+    <!-- Logout Button -->
+    <Button
+        android:id="@+id/logoutBtn"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Logout"
+        android:textAllCaps="false"
+        android:backgroundTint="#B22222"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="16dp"
+        android:textSize="20sp"/>
+
+</LinearLayout>

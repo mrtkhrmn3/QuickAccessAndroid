@@ -1,6 +1,7 @@
 package com.example.quickaccessandroid.Activities;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -228,19 +229,25 @@ public class ResidentMainMenuActivity extends AppCompatActivity {
             }
         });
 
-        /*
         // Logout Button
         logoutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Perform logout operation (e.g., clear user session or redirect to login)
-                // For now, we'll just finish the activity and go back to the login screen
+                // 1. Token'ı temizle
+                SharedPreferences preferences = getSharedPreferences("auth", MODE_PRIVATE);
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.remove("token");
+                editor.remove("role");
+                editor.apply();
+
+                // 2. Login'e yönlendir, geçmişi temizle
                 Intent intent = new Intent(ResidentMainMenuActivity.this, LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK); // backstack'i sil
                 startActivity(intent);
-                finish(); // Close the current activity after logging out
+                finish();
             }
         });
-         */
+
     }
 
     private void saveNotificationToDatabase(CreateNotificationDTO notification) {

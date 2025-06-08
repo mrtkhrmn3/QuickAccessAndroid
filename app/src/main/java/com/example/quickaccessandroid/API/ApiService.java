@@ -34,8 +34,8 @@ public interface ApiService {
     @POST("api/Notification")
     Call<Void> sendNotification(@Body CreateNotificationDTO dto);
 
-    @GET("api/Notification/GetActiveNotifications/{siteName}")
-    Call<List<NotificationDTO>> getNotifications(@Path("siteName") String siteName);
+    @GET("api/Notification/ActiveNotificationsForSecurity")
+    Call<List<NotificationDTO>> getNotifications(@Query("userId") String userId);
 
     @GET("api/Notification/ActiveNotificationsForResident")
     Call<List<NotificationDTO>> getActiveNotificationsForResident(@Query("userId") String userId);
@@ -46,9 +46,11 @@ public interface ApiService {
     @PUT("api/Notification/CompleteNotification")
     Call<ResponseBody> completeNotification(@Body NotificationCompleteDTO dto);
 
-    @DELETE("api/Notification/DeleteNotification{id}")
+    @DELETE("api/Notification/DeleteNotification/{id}")
     Call<ResponseBody> deleteNotification(@Path("id") String id);
 
+    @GET("api/Notification/GetNotification/{id}")
+    Call<ResponseBody> getNotificationById(@Path("id") String id);
 
     //REGISTER
     @POST("api/Register/register")
@@ -62,5 +64,31 @@ public interface ApiService {
 
     @POST("api/Register/security")
     Call<Void> registerSecurity(@Body SecurityRegisterDTO dto);
+
+    /*
+    //USER MANAGEMENT
+    @GET("api/UserManagement/Admins")
+    Call<List<AdminDTO>> getAllAdmins();
+
+    @GET("api/UserManagement/SiteManagers")
+    Call<List<SiteManagerDTO>> getAllSiteManagers();
+
+    @GET("api/UserManagement/Securities")
+    Call<List<SecurityDTO>> getAllSecurities();
+
+    @GET("api/UserManagement/Residents")
+    Call<List<ResidentDTO>> getAllResidents();
+*/
+    @DELETE("api/UserManagement/Admin/{id}")
+    Call<Void> deleteAdmin(@Path("id") String adminId);
+
+    @DELETE("api/UserManagement/SiteManager/{id}")
+    Call<Void> deleteSiteManager(@Path("id") String siteManagerId);
+
+    @DELETE("api/UserManagement/Security/{id}")
+    Call<Void> deleteSecurity(@Path("id") String securityId);
+
+    @DELETE("api/UserManagement/Resident/{id}")
+    Call<Void> deleteResident(@Path("id") String residentId);
 }
 
