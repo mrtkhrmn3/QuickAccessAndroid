@@ -23,6 +23,8 @@
         <activity android:name=".Activities.AddSecurityActivity" />
         <activity android:name=".Activities.SecurityActiveNotificationsActivity" />
         <activity android:name=".Activities.ResidentActiveNotificationsActivity" />
+        <activity android:name=".Activities.SiteManagerMainMenuActivity" />
+        <activity android:name=".Activities.AdminMainMenuActivity" />
 
 
         <activity

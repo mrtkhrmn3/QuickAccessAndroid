@@ -1,12 +1,14 @@
 package com.example.quickaccessandroid.Models;
 
 public class Notification {
+    private String notificationId;
     private String title;
     private String message;
     private String timestamp;
 
     // Constructor
-    public Notification(String title, String message, String timestamp) {
+    public Notification(String notificationId, String title, String message, String timestamp) {
+        this.notificationId = notificationId;
         this.title = title;
         this.message = message;
         this.timestamp = timestamp;
@@ -23,6 +25,10 @@ public class Notification {
 
     public String getTimestamp() {
         return timestamp;
+    }
+
+    public String getNotificationId(){
+        return notificationId;
     }
 }
 

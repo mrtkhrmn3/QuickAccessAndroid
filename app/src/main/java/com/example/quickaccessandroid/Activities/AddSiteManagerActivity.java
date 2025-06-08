@@ -1,6 +1,7 @@
 package com.example.quickaccessandroid.Activities;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -57,7 +58,7 @@ public class AddSiteManagerActivity extends AppCompatActivity {
             return;
         }
 
-        SiteManagerRegisterDTO dto = new SiteManagerRegisterDTO(name, surname, siteName, username, password);
+        SiteManagerRegisterDTO dto = new SiteManagerRegisterDTO(username, password, name, surname, siteName);
 
         Call<Void> call = apiService.registerSiteManager(dto);
         call.enqueue(new Callback<Void>() {
@@ -68,6 +69,7 @@ public class AddSiteManagerActivity extends AppCompatActivity {
                     clearFields();
                 } else {
                     Toast.makeText(AddSiteManagerActivity.this, "Failed to add site manager. Try again.", Toast.LENGTH_SHORT).show();
+                    Log.e("API_ERROR", response.toString());
                 }
             }
 

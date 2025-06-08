@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.quickaccessandroid.DTO.NotificationDTO;
 import com.example.quickaccessandroid.Models.Notification;
 import com.example.quickaccessandroid.R;
 
@@ -15,11 +16,17 @@ import java.util.List;
 public class SecurityNotificationAdapter extends RecyclerView.Adapter<SecurityNotificationAdapter.NotificationViewHolder> {
 
     private List<Notification> notificationsList;
+    private OnItemClickListener listener;
 
-    // Constructor
-    public SecurityNotificationAdapter(List<Notification> notificationsList) {
-        this.notificationsList = notificationsList;
+    public interface OnItemClickListener {
+        void onItemClick(Notification notification);
     }
+
+    public SecurityNotificationAdapter(List<Notification> notificationsList, OnItemClickListener listener) {
+        this.notificationsList = notificationsList;
+        this.listener = listener;
+    }
+
 
     @Override
     public NotificationViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -34,6 +41,12 @@ public class SecurityNotificationAdapter extends RecyclerView.Adapter<SecurityNo
         holder.title.setText(notification.getTitle());
         holder.message.setText(notification.getMessage());
         holder.timestamp.setText(notification.getTimestamp());
+
+        holder.itemView.setOnClickListener(v -> {
+            if (listener != null) {
+                listener.onItemClick(notification);
+            }
+        });
     }
 
     @Override
