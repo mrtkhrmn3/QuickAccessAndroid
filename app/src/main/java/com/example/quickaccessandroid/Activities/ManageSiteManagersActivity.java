@@ -12,9 +12,11 @@ import com.example.quickaccessandroid.API.ApiClient;
 import com.example.quickaccessandroid.API.ApiService;
 import com.example.quickaccessandroid.Adapters.ManageSiteManagersAdapter;
 import com.example.quickaccessandroid.DTO.ManageSiteManagerDTO;
+import com.example.quickaccessandroid.DTO.NotificationDTO;
 import com.example.quickaccessandroid.R;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import retrofit2.Call;
@@ -51,6 +53,11 @@ public class ManageSiteManagersActivity extends AppCompatActivity {
 
                     // Site Manager'ları listeye ekle
                     siteManagersList = new ArrayList<>(siteManagersDTO);
+
+                    // Sort site managers by name and then surname
+                    siteManagersList.sort(Comparator
+                            .comparing(ManageSiteManagerDTO::getName)
+                            .thenComparing(ManageSiteManagerDTO::getSurname));
 
                     // Adapter'ı oluşturup RecyclerView'a set et
                     siteManagersAdapter = new ManageSiteManagersAdapter(ManageSiteManagersActivity.this, siteManagersList);

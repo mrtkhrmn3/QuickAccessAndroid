@@ -19,6 +19,7 @@ import com.example.quickaccessandroid.DTO.ManageSiteManagerDTO;
 import com.example.quickaccessandroid.R;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import retrofit2.Call;
@@ -55,6 +56,11 @@ public class ManageResidentsActivity extends AppCompatActivity {
 
                     // listeye ekle
                     residentsList = new ArrayList<>(residentsDTO);
+
+                    // Sort residents by name and then surname
+                    residentsList.sort(Comparator
+                            .comparing(ManageResidentDTO::getName)
+                            .thenComparing(ManageResidentDTO::getSurname));
 
                     // Adapter'ı oluşturup RecyclerView'a set et
                     residentsAdapter = new ManageResidentsAdapter(ManageResidentsActivity.this, residentsList);

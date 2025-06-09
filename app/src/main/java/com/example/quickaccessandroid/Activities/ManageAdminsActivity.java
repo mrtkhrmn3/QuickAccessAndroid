@@ -15,6 +15,7 @@ import com.example.quickaccessandroid.API.JwtUtils;
 import com.example.quickaccessandroid.Adapters.ManageAdminsAdapter;
 import com.example.quickaccessandroid.Adapters.ResidentNotificationAdapter;
 import com.example.quickaccessandroid.DTO.ManageAdminDTO;
+import com.example.quickaccessandroid.DTO.ManageSiteManagerDTO;
 import com.example.quickaccessandroid.DTO.NotificationDTO;
 import com.example.quickaccessandroid.Models.Notification;
 import com.example.quickaccessandroid.R;
@@ -60,6 +61,11 @@ public class ManageAdminsActivity extends AppCompatActivity {
 
                     // Adminleri listeye ekle
                     adminsList = new ArrayList<>(adminsDTO);
+
+                    // Sort admins by name and then surname
+                    adminsList.sort(Comparator
+                            .comparing(ManageAdminDTO::getName)
+                            .thenComparing(ManageAdminDTO::getSurname));
 
                     // Adapter'ı oluşturup RecyclerView'a set et
                     adminsAdapter = new ManageAdminsAdapter(ManageAdminsActivity.this, adminsList);

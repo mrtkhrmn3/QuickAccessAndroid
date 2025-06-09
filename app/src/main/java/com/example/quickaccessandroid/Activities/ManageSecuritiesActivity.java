@@ -12,11 +12,13 @@ import com.example.quickaccessandroid.API.ApiClient;
 import com.example.quickaccessandroid.API.ApiService;
 import com.example.quickaccessandroid.Adapters.ManageSecuritiesAdapter;
 import com.example.quickaccessandroid.Adapters.ManageSiteManagersAdapter;
+import com.example.quickaccessandroid.DTO.ManageAdminDTO;
 import com.example.quickaccessandroid.DTO.ManageSecurityDTO;
 import com.example.quickaccessandroid.DTO.ManageSiteManagerDTO;
 import com.example.quickaccessandroid.R;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import retrofit2.Call;
@@ -53,6 +55,11 @@ public class ManageSecuritiesActivity extends AppCompatActivity {
 
                     // listeye ekle
                     securitiesList = new ArrayList<>(securities);
+
+                    // Sort securities by name and then surname
+                    securitiesList.sort(Comparator
+                            .comparing(ManageSecurityDTO::getName)
+                            .thenComparing(ManageSecurityDTO::getSurname));
 
                     // Adapter'ı oluşturup RecyclerView'a set et
                     securityAdapter = new ManageSecuritiesAdapter(ManageSecuritiesActivity.this, securitiesList);
