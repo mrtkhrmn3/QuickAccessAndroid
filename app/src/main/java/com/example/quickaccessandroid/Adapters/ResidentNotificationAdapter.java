@@ -35,7 +35,7 @@ public class ResidentNotificationAdapter extends RecyclerView.Adapter<ResidentNo
 
     @Override
     public NotificationViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.resident_notification_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_resident_notification, parent, false);
         return new NotificationViewHolder(view);
     }
 

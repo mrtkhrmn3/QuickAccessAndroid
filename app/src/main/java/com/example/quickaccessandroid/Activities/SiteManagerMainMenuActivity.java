@@ -53,7 +53,8 @@ public class SiteManagerMainMenuActivity extends AppCompatActivity {
         manageResidentsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(SiteManagerMainMenuActivity.this, ManageResidentsActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -61,7 +62,8 @@ public class SiteManagerMainMenuActivity extends AppCompatActivity {
         manageSecuritiesBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(SiteManagerMainMenuActivity.this, ManageSecuritiesActivity.class);
+                startActivity(intent);
             }
         });
 

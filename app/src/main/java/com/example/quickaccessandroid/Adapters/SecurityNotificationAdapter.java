@@ -7,7 +7,6 @@ import android.widget.TextView;
 
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.quickaccessandroid.DTO.NotificationDTO;
 import com.example.quickaccessandroid.Models.Notification;
 import com.example.quickaccessandroid.R;
 
@@ -31,7 +30,7 @@ public class SecurityNotificationAdapter extends RecyclerView.Adapter<SecurityNo
     @Override
     public NotificationViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         // Security için özel item layout'u kullanılacak
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.security_notification_item, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_security_notification, parent, false);
         return new NotificationViewHolder(view);
     }
 

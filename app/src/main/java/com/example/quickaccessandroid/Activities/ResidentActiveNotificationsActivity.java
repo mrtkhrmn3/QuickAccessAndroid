@@ -19,6 +19,7 @@ import com.example.quickaccessandroid.R;
 import com.example.quickaccessandroid.Utils.TimeUtils;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 
 import org.json.JSONObject;
@@ -67,6 +68,10 @@ public class ResidentActiveNotificationsActivity extends AppCompatActivity {
 
                     // DTO’ları Model’e çevir
                     notificationList = new ArrayList<>();
+
+                    // Sort notifications from first created one to last created one with using comparators sort
+                    notificationDTOs.sort(Comparator.comparing(NotificationDTO::getCreatedAt));
+
                     for (NotificationDTO dto : notificationDTOs) {
                         String relativeTime = TimeUtils.getTimeAgo(dto.getCreatedAt());
                         notificationList.add(new Notification(dto.getNotificationId(), dto.getType(), dto.getDescription(), relativeTime));

@@ -1,13 +1,17 @@
 package com.example.quickaccessandroid.API;
 
+import com.example.quickaccessandroid.DTO.ManageAdminDTO;
 import com.example.quickaccessandroid.DTO.AdminRegisterDTO;
 import com.example.quickaccessandroid.DTO.CreateNotificationDTO;
 import com.example.quickaccessandroid.DTO.LoginRequestDTO;
 import com.example.quickaccessandroid.DTO.LoginResponseDTO;
+import com.example.quickaccessandroid.DTO.ManageResidentDTO;
+import com.example.quickaccessandroid.DTO.ManageSiteManagerDTO;
 import com.example.quickaccessandroid.DTO.NotificationCompleteDTO;
 import com.example.quickaccessandroid.DTO.NotificationDTO;
 import com.example.quickaccessandroid.DTO.NotificationUpdateDTO;
 import com.example.quickaccessandroid.DTO.ResidentRegisterDTO;
+import com.example.quickaccessandroid.DTO.ManageSecurityDTO;
 import com.example.quickaccessandroid.DTO.SecurityRegisterDTO;
 import com.example.quickaccessandroid.DTO.SiteManagerRegisterDTO;
 
@@ -65,20 +69,20 @@ public interface ApiService {
     @POST("api/Register/security")
     Call<Void> registerSecurity(@Body SecurityRegisterDTO dto);
 
-    /*
+
     //USER MANAGEMENT
     @GET("api/UserManagement/Admins")
-    Call<List<AdminDTO>> getAllAdmins();
+    Call<List<ManageAdminDTO>> getAllAdmins();
 
     @GET("api/UserManagement/SiteManagers")
-    Call<List<SiteManagerDTO>> getAllSiteManagers();
+    Call<List<ManageSiteManagerDTO>> getAllSiteManagers();
 
     @GET("api/UserManagement/Securities")
-    Call<List<SecurityDTO>> getAllSecurities();
+    Call<List<ManageSecurityDTO>> getAllSecurities();
 
     @GET("api/UserManagement/Residents")
-    Call<List<ResidentDTO>> getAllResidents();
-*/
+    Call<List<ManageResidentDTO>> getAllResidents();
+
     @DELETE("api/UserManagement/Admin/{id}")
     Call<Void> deleteAdmin(@Path("id") String adminId);
 
@@ -90,5 +94,11 @@ public interface ApiService {
 
     @DELETE("api/UserManagement/Resident/{id}")
     Call<Void> deleteResident(@Path("id") String residentId);
+
+    @GET("api/UserManagement/ResidentsForSiteManager")
+    Call<List<ManageResidentDTO>> getResidentsForSiteManager();
+
+    @GET("api/UserManagement/SecuritiesForSiteManager")
+    Call<List<ManageSecurityDTO>> getSecuritiesForSiteManager();
 }
 
