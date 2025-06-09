@@ -6,17 +6,14 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo_quickaccess"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.QuickAccessAndroid"
         tools:targetApi="31">
-        <activity
-            android:name=".Activities.ResidentMainMenuActivity"
-            android:exported="true">
-        </activity>
 
+        <activity android:name=".Activities.ResidentMainMenuActivity" />
         <activity android:name=".Activities.AddAdminActivity" />
         <activity android:name=".Activities.AddSiteManagerActivity" />
         <activity android:name=".Activities.AddResidentActivity" />
@@ -25,7 +22,10 @@
         <activity android:name=".Activities.ResidentActiveNotificationsActivity" />
         <activity android:name=".Activities.SiteManagerMainMenuActivity" />
         <activity android:name=".Activities.AdminMainMenuActivity" />
-
+        <activity android:name=".Activities.ManageAdminsActivity" />
+        <activity android:name=".Activities.ManageSiteManagersActivity" />
+        <activity android:name=".Activities.ManageSecuritiesActivity" />
+        <activity android:name=".Activities.ManageResidentsActivity" />
 
         <activity
             android:name=".Activities.LoginActivity"

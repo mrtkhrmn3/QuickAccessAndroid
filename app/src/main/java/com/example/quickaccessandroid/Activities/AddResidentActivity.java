@@ -57,6 +57,12 @@ public class AddResidentActivity extends AppCompatActivity {
         String phone = editPhoneNo.getText().toString().trim();
         String siteName = editSiteName.getText().toString().trim();
 
+        // Phone number validation with regular expression
+        if (!phone.matches("^05\\d{9}$")) {
+            Toast.makeText(this, "Please enter a valid phone number", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         if (name.isEmpty() || surname.isEmpty() || block.isEmpty() || aptNo.isEmpty()
                 || phone.isEmpty() || siteName.isEmpty()) {
             Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();

@@ -48,7 +48,8 @@ public class AdminMainMenuActivity extends AppCompatActivity {
         manageAdminsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(AdminMainMenuActivity.this, ManageAdminsActivity.class);
+                startActivity(intent);
             }
         });
 
@@ -56,7 +57,8 @@ public class AdminMainMenuActivity extends AppCompatActivity {
         manageSiteManagersBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(AdminMainMenuActivity.this, ManageSiteManagersActivity.class);
+                startActivity(intent);
             }
         });
 

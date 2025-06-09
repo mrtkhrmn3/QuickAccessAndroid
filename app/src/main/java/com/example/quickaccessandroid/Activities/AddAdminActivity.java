@@ -51,6 +51,12 @@ public class AddAdminActivity extends AppCompatActivity {
         String username = editUsername.getText().toString().trim();
         String password = editPassword.getText().toString().trim();
 
+        // Password validation with regular expression (min 6 characters and at least 1 uppercase letter)
+        if (!password.matches("^(?=.*[A-Z]).{6,}$")) {
+            Toast.makeText(this, "Password must be 6+ characters and include 1 uppercase letter", Toast.LENGTH_SHORT).show();
+            return;
+        }
+
         if (name.isEmpty() || surname.isEmpty() || username.isEmpty() || password.isEmpty()) {
             Toast.makeText(this, "Please fill in all fields", Toast.LENGTH_SHORT).show();
             return;

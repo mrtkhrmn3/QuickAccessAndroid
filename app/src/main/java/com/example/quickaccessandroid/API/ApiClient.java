@@ -16,7 +16,7 @@ public class ApiClient {
                     .build();
 
             retrofit = new Retrofit.Builder()
-                    .baseUrl("https://myapi2-dot-gembosapi.oa.r.appspot.com/") // senin API adresin
+                    .baseUrl("https://myapi2-dot-qa-api-462416.oa.r.appspot.com/") // senin API adresin
                     .addConverterFactory(GsonConverterFactory.create())
                     .client(client)
                     .build();

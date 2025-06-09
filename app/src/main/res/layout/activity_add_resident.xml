@@ -82,7 +82,7 @@
         android:id="@+id/editResidentPhoneNo"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:hint="Phone No"
+        android:hint="Phone No (05xxxxxxxxx)"
         android:textColorHint="@color/black"
         android:inputType="phone"
         android:layout_marginTop="16dp"
